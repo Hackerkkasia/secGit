@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+
+  <h1 class="text-3xl font-bold mb-6 text-gray-800">🎲 Dice Game</h1>
+
+  
+
+    <section class="demo flex ">
+        <div class="pic">
+        <p id="pic"></p>
+        </div>
+ 
+        <div class="picc">
+        <p id="pic2"></p>
+        </div>
+    </section>
+
+
+
+    <script>
+        function changeImage() {
+            const images = [
+                "https://upload.wikimedia.org/wikipedia/commons/1/1b/Dice-1-b.svg?fbclid=PAY2xjawNoSgRleHRuA2FlbQIxMAABpxNZZaLCwY6CVGAsll-K3j7C9zweVPCaMsqdfkivaOOn-LwLiZPIDDC2GwPK_aem_BqMJqOfwyLLJhJZe1we_4A",
+                "https://upload.wikimedia.org/wikipedia/commons/5/5f/Dice-2-b.svg?fbclid=PAY2xjawNoSgRleHRuA2FlbQIxMAABpxNZZaLCwY6CVGAsll-K3j7C9zweVPCaMsqdfkivaOOn-LwLiZPIDDC2GwPK_aem_BqMJqOfwyLLJhJZe1we_4A",
+                "https://upload.wikimedia.org/wikipedia/commons/b/b1/Dice-3-b.svg?fbclid=PAY2xjawNoSgRleHRuA2FlbQIxMAABpxNZZaLCwY6CVGAsll-K3j7C9zweVPCaMsqdfkivaOOn-LwLiZPIDDC2GwPK_aem_BqMJqOfwyLLJhJZe1we_4A",
+                "https://upload.wikimedia.org/wikipedia/commons/f/fd/Dice-4-b.svg?fbclid=PAY2xjawNoSgRleHRuA2FlbQIxMAABpxNZZaLCwY6CVGAsll-K3j7C9zweVPCaMsqdfkivaOOn-LwLiZPIDDC2GwPK_aem_BqMJqOfwyLLJhJZe1we_4A",
+                "https://upload.wikimedia.org/wikipedia/commons/0/08/Dice-5-b.svg?fbclid=PAY2xjawNoSgRleHRuA2FlbQIxMAABpxNZZaLCwY6CVGAsll-K3j7C9zweVPCaMsqdfkivaOOn-LwLiZPIDDC2GwPK_aem_BqMJqOfwyLLJhJZe1we_4A",
+                "https://upload.wikimedia.org/wikipedia/commons/2/26/Dice-6-b.svg?fbclid=PAY2xjawNoSgRleHRuA2FlbQIxMAABpxNZZaLCwY6CVGAsll-K3j7C9zweVPCaMsqdfkivaOOn-LwLiZPIDDC2GwPK_aem_BqMJqOfwyLLJhJZe1we_4A"
+            ];
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const imageContainer = document.getElementById("pic");
+            imageContainer.innerHTML = `<img src="${images[randomIndex]}"' width=\'400px\' height=\'200px\' alt="Random Image">`;
+
+            const randomIndex2 = Math.floor(Math.random() * images.length);
+            const imageContainer2 = document.getElementById("pic2");
+            imageContainer2.innerHTML = `<img src="${images[randomIndex2]}"' width=\'400px\' height=\'200px\' alt="Random Image">`;
+
+             if (randomIndex>randomIndex2){
+            document.write("<h1>🏆 Player 1 Wins!</h1>")
+        }
+        if (randomIndex<randomIndex2){
+            document.write("<h1>🏆 Player 2 Wins!</h1>")
+        }
+        
+        if (randomIndex==randomIndex2){
+            document.write("<h1>🤝 It's a Draw!</h1>")
+        }
+    }
+       
+changeImage()
+    </script>
+</body>
+
+</html>

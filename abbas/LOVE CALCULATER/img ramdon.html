@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h3>Here is the first picture</h3>
+        <p id="pic"></p>
+    </section>
+    <section>
+        <h3>Here is the Second picture</h3>
+        <p id="pic2"></p>
+    </section>
+
+
+    <script>
+        function pic(){
+            let randomInt = Math.floor(Math.random() * 7);
+            document.getElementById("pic").innerHTML="<img src=\'C:\Users\Mohdk\OneDrive\Documents\img(randomInt).webp' width=\'400px\' height=\'150px\'>";
+            document.getElementById("pic2").innerHTML="<img src=\'C:\Users\Mohdk\OneDrive\Documents\img(randomInt).webp' width=\'400px\' height=\'150px\'>";
+        }
+        pic()
+
+    </script>
+</body>
+</html>

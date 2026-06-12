@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vaibhav Gupta" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/9484e9fcdb.js" crossorigin="anonymous"></script>
+    <title>Love Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1><i class="fa-solid fa-heart"></i> Love Calculator <i class="fa-solid fa-heart"></i></h1>
+        <div class="calculator">
+            <label for="name1">Your Name :</label>
+            <input type="text" id="name1" placeholder="Enter your name" required />
+            <label for="name2">Your Partner's Name :</label>
+            <input type="text" id="name2" placeholder="Enter your partner's name" required />
+            <button onclick="calculateLove()">Calculate</button>
+
+            <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        function calculateLove() {
+    const name1 = document.getElementById('name1').value.trim();
+    const name2 = document.getElementById('name2').value.trim();
+
+    if (name1 === '' || name2 === '') {
+        alert("Please enter both names!");
+        return;
+    }
+
+    const lovePercentage = Math.floor(Math.random() * 101);
+    const result = document.getElementById('result');
+    result.style.display = "block";
+    result.style.animation = "love-animation 1s ease-in-out";
+    result.innerHTML = `${name1} & ${name2}'s love percentage : ${lovePercentage}%`;
+
+    if (lovePercentage < 30) {
+        result.innerHTML += "<br> Not a great match! Keep looking : ("
+    }
+    else if (lovePercentage < 70) {
+        result.innerHTML += "<br> Still, there's potential! Give it a try!"
+    }
+    else {
+        result.innerHTML += "<br> Great match! Love is in the air : )"
+    }
+
+    result.classList.remove("show");
+    void result.offsetWidth;
+    result.classList.add("show");
+
+    document.querySelectorAll("input").forEach(input => {
+        input.value = "";
+    });
+
+    document.querySelectorAll("input").forEach(input => {
+        input.addEventListener("input", () => {
+            document.getElementById("result").style.display = "none";
+        });
+    });
+}
+    </script>
+</body>
+
+</html>

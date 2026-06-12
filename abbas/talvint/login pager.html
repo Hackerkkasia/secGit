@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <center>
+        <div class="w-150 border-2 h-100 mt-30 rounded-md">
+            <h1 class="text-3xl mt-5">Login</h1>
+            <input type="text" placeholder="UserName" id="name" required class="w-100 h-auto border-2 mt-10 rounded-md">
+            <input type="password" placeholder="Password" id="Password" required
+                class="w-100 h-auto border-2 mt-8 rounded-md"> <br>
+            <button class="w-19 h-auto border-2 rounded-md mt-5" onclick="Login()">Login</button>
+            <div id="result"></div>
+        </div>
+    </center>
+
+    <script>
+        function validatePassword(password) {
+            // Check for minimum length (e.g., 8 characters)
+            if (password.length < 8) {
+                return { isValid: false, message: "Password must be at least 8 characters long." };
+            }
+
+            // Check for at least one uppercase letter
+            if (!/[A-Z]/.test(password)) {
+                return { isValid: false, message: "Password must contain at least one uppercase letter." };
+            }
+
+            // Check for at least one lowercase letter
+            if (!/[a-z]/.test(password)) {
+                return { isValid: false, message: "Password must contain at least one lowercase letter." };
+            }
+
+            // Check for at least one number
+            if (!/[0-9]/.test(password)) {
+                return { isValid: false, message: "Password must contain at least one number." };
+            }
+
+            // Check for at least one special character (e.g., !@#$%^&*)
+            if (!/[!@#$%^&*]/.test(password)) {
+                return { isValid: false, message: "Password must contain at least one special character (!@#$%^&*)." };
+            }
+
+            // If all criteria are met
+            return { isValid: true, message: "Password is valid." };
+        }
+
+        function Login() {
+            const username = document.getElementById('name').value;
+            const password = document.getElementById('Password').value;
+            const resultDiv = document.getElementById('result');
+
+            // Simple username check (for demo; in real app, check against database)
+            if (username !== 'admin') {
+                resultDiv.innerHTML = '<p style="color: red;">Invalid username.</p>';
+                return;
+            }
+
+            // Validate password
+            const validation = validatePassword(password);
+            if (validation.isValid) {
+                resultDiv.innerHTML = '<p style="color: green;">Login successful!</p>';
+            } else {
+                resultDiv.innerHTML = `<p style="color: red;">${validation.message}</p>`;
+            }
+        }
+
+        // Example usage (for testing in console):
+        const result1 = validatePassword("StrongP@ss1");
+        console.log(result1); // { isValid: true, message: "Password is valid." }
+
+        const result2 = validatePassword("weakpass");
+        console.log(result2); // { isValid: false, message: "Password must contain at least one uppercase letter." }
+    </script>
+</body>
+
+</html>

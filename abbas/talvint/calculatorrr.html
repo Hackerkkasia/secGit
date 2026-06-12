@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <center>
+    <div class="border-2 w-90 border-black bg-black h-auto p-2 rounded-md mt-50">
+        <input type="text" id="a" class="border-2 w-85 border-black bg-white/20 h-auto p-5 rounded-md text-white">
+            <h2 id="result"></h2>
+        <div class="grid grid-cols-4 gap-1 mt-2 ">
+            <button class="bg-gray-400 text-black rounded-full w-8" id="Ac" onclick="clr()">Ac</button>
+            <button class="bg-gray-400 text-black rounded-full w-8" id="DEL" onclick="pick('DEL')">DEL</button>
+            <button class="bg-gray-400 text-black rounded-full w-8" id="%" onclick="pick('%')">%</button>
+            <button class="bg-gray-400 text-black rounded-full  bg-yellow-600 w-8">/</button>
+        </div>
+
+        <div class="grid grid-cols-4 gap-1 mt-2 ">
+            <button class="bg-gray-400 text-black rounded-full w-8" id="7" onclick="pick('7')">7</button>
+            <button class="bg-gray-400 text-black rounded-full w-8" id="8" onclick="pick('8')">8</button>
+            <button class="bg-gray-400 text-black rounded-full w-8" id="9" onclick="pick('9')">9</button>
+            <button class="bg-gray-400 text-black rounded-full  bg-yellow-600 w-8" onclick="pick('*')">*</button>
+        </div>
+
+        <div class="grid grid-cols-4 gap-1 mt-2 ">
+            <button class="bg-gray-400 text-black rounded-full w-8" id="4" onclick="pick('4')">4</button>
+            <button class="bg-gray-400 text-black rounded-full w-8" id="5" onclick="pick('5')">5</button>
+            <button class="bg-gray-400 text-black rounded-full w-8" id="6" onclick="pick('6')">6</button>
+            <button class="bg-gray-400 text-black rounded-full  bg-yellow-600 w-8" onclick="pick('-')">-</button>
+        </div>
+
+        <div class="grid grid-cols-4 gap-1 mt-2 ">
+            <button class="bg-gray-400 text-black rounded-full w-8" id="1" onclick="pick('1')">1</button>
+            <button class="bg-gray-400 text-black rounded-full w-8" id="2" onclick="pick('2')">2</button>
+            <button class="bg-gray-400 text-black rounded-full w-8" id="3" onclick="pick('3')">3</button>
+            <button class="bg-gray-400 text-black rounded-full  bg-yellow-600 w-8" onclick="pick('+')">+</button>
+        </div>
+
+        <div class="grid grid-cols-4 gap-1 mt-2 ">
+            <button class="bg-gray-400 text-black rounded-full w-8" id="0" onclick="pick('0')">0</button>
+            <button class="bg-gray-400 text-black rounded-full w-8" id="." onclick="pick('.')">.</button>
+            <button class="bg-gray-400 text-black rounded-full w-8" id="X" onclick="backspace()">X</button>
+            <button class="bg-gray-400 text-black rounded-full w-8" id="X" onclick="back()"><--</button>
+            <button class="bg-gray-400 text-black rounded-full  bg-yellow-600 w-8" onclick="add()">=</button>
+        </div>
+
+        </div>
+    </center>
+
+    <script>
+        function pick(val)
+        {
+            document.getElementById('a').value+=val
+        }
+        function add()
+        {
+            var x=document.getElementById("a").value;
+            result=eval(x)
+            document.getElementById("a").value=result;
+        }
+        function clr()
+        {
+            document.getElementById("a").value=" "
+        }
+        function back()
+        {
+            var y=document.getElementById("a").value;
+            num=(y%10)
+            num1=(y-num)
+            num3=(num1/10)
+            result=num3
+            document.getElementById("a").value=result;
+
+        }
+
+        function backspace()
+        {
+            var z=document.getElementById("a");
+            z.value=String(z.value).slice(0,-1);
+            
+        }
+    </script>
+</body>
+
+</html>

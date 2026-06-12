@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        Day = parseInt(prompt("Enter the Days you have lived:"))
+        Remainder = (Day % 365)
+        year = (Day - Remainder) / 365
+
+        DayM = Day - (year * 365)
+        RemainderM = (DayM % 30)
+        month = (DayM - RemainderM) / 30
+
+        DayW = DayM - (month * 30)
+        RemainderW = (DayW % 7)
+        Week = (DayW - RemainderW) / 7
+
+        DayD = DayW - (Week * 7)
+        RemainderD = (DayD % 1)
+        Dayy = (DayD - RemainderD) / 1
+
+        document.write(year + "Year " + month + "month " + Week + "week " + Dayy + "Days")
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    h2 {
+      color: #333;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #result {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+    }
+    #error {
+      margin-top: 10px;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>🎂 Age Calculator</h2>
+    <input type="date" id="birthdate">
+    <br>
+    <button onclick="calculateAge()">Calculate Age</button>
+    <p id="error"></p>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function calculateAge() {
+      const birthInput = document.getElementById("birthdate").value;
+      const error = document.getElementById("error");
+      const result = document.getElementById("result");
+
+      error.textContent = "";
+      result.textContent = "";
+
+      if (!birthInput) {
+        error.textContent = "⚠️ Please select your birthdate!";
+        return;
+      }
+
+      const birthDate = new Date(birthInput);
+      const today = new Date();
+
+      if (birthDate > today) {
+        error.textContent = "⚠️ Birthdate cannot be in the future!";
+        return;
+      }
+
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const monthDiff = today.getMonth() - birthDate.getMonth();
+      const dayDiff = today.getDate() - birthDate.getDate();
+
+      // Adjust if the birthday hasn't occurred yet this year
+      if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+        age--;
+      }
+
+      result.textContent = `🎉 You are ${age} years old.`;
+    }
+  </script>
+
+</body>
+</html>

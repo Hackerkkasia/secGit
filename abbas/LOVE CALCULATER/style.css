@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('bmi2.webp');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 500px;
+    height: 80%;
+    background-color: #f4d6de;
+    color: #00ff00;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 2px solid #ff007b;
+}
+
+h1 {
+    margin-bottom: 40px;
+    border: 1px solid #ff007b;
+    padding: 6px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #ff007b;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #ff007b;
+}
+
+button {
+    background-color: #ff007b;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    margin-top: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff3496;
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+#result.show {
+    display: block;
+    opacity: 1;
+}

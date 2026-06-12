@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add to Cart Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h2>🛒 Simple Add to Cart</h2>
+
+  <button onclick="addToCart('Apple')">Add Apple</button>
+  <button onclick="addToCart('Banana')">Add Banana</button>
+  <button onclick="addToCart('Orange')">Add Orange</button>
+  <button onclick="addToCart('Mango')">Add Mango</button>
+
+  <h3>Your Cart:</h3>
+  <div id="cartDisplay"></div>
+
+  <script>
+    // Create an empty array for the cart
+    let cart = [];
+
+    // Function to add items to cart
+    function addToCart(item) {
+      cart.push(item); // Add the item to the array
+      displayCart();   // Show updated cart
+    }
+
+    // Function to display cart items
+    function displayCart() {
+      document.getElementById("cartDisplay").innerHTML = ""; // Clear old display
+      document.write("Items in Cart: <br>");
+      for (let i = 0; i < cart.length; i++) {
+        document.write((i + 1) + ". " + cart[i] + "<br>");
+      }
+    }
+  </script>
+</body>
+</html>

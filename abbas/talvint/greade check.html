@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Checker</title>
+</head>
+<body>
+    <input id="grade" type="number" placeholder="Enter your Grade:" min="0" max="100">
+    <div id="demo"></div>
+    <button onclick="checkGrade()">Check</button>
+
+    <script>
+        function checkGrade() {
+            let num = parseInt(document.getElementById("grade").value);
+            
+            if (isNaN(num) || num < 0 || num > 100) {
+                document.getElementById("demo").innerHTML=("Please enter a valid grade between 0 and 100.");
+                return;
+            }
+            
+            if (num < 34) {
+                document.getElementById("demo").innerHTML="You are FAIL!😐"
+            } else if (num >= 34 && num < 50) {
+                document.getElementById("demo").innerHTML=("You need to Study hard!😣");
+            } else if (num >= 50 && num < 70) {
+                document.getElementById("demo").innerHTML=("You are an Average Student!😪");
+            } else if (num >= 70 && num < 80) {
+                document.getElementById("demo").innerHTML=("You are a better Student!😳");
+            } else if (num >= 80 && num < 90) {
+                document.getElementById("demo").innerHTML=("You are a Good Student!😉");
+            } else if (num >= 90) {
+                document.getElementById("demo").innerHTML=("You are a GOAT!😎");
+            }
+        }
+    </script>
+</body>
+</html>

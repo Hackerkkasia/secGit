@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Product Landing — Tailwind CSS</title>
+  <!-- Tailwind Play CDN for quick preview (use proper build for production) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-indigo-900 via-fuchsia-600 to-purple-800 text-white antialiased">
+
+  <!-- NAVBAR -->
+  <header class="backdrop-blur-sm bg-white/10 sticky top-0 z-40">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-lg  flex items-center justify-center">
+          <img src="image/profile.jpg" class="rounded-full   hover:opacity-100" alt="">
+        </div>
+        <span class="font-extrabold text-lg tracking-tight">
+          Kaif
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 ">
+        <a href="#start" class="text-sm font-medium hover:underline">Home</a>
+        <a href="#about" class="text-sm font-medium hover:underline">About-Me</a>
+        <a href="#journey" class="text-sm font-medium hover:underline">My-journey</a>
+        <a href="#contact" class="text-sm font-medium hover:underline">Contact</a>
+        <a href="#start"
+          class="ml-2 inline-block bg-white/10 hover:bg-white/20 px-4 py-2 rounded-md text-sm font-semibold">Get
+          Started</a>
+      </nav>
+
+      <!-- mobile menu -->
+      <button id="nav-toggle"
+        class="md:hidden inline-flex items-center justify-center p-2 rounded-md bg-white/10 hover:bg-white/20">
+        <svg id="hamb" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <!-- mobile nav -->
+
+    <div class="md:hidden hidden" id="mobile-nav">
+      <div class="px-6 pb-6">
+        <a href="#start" class="block py-2">Home</a>
+        <a href="#about" class="block py-2">About</a>
+        <a href="#journey" class="block py-2">My Journey</a>
+        <a href="#contact" class="block py-2">Contact</a>
+      </div>
+    </div>
+
+  </header>
+  <!--HERO-->
+  <main class="container mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <section class="max-w-xl">
+
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">DEVELOPER CRAFTING INNOVATION DIGITALY<span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80"></span></h1>
+
+        <p class="text-white/85mb-6">All-in-one toolkit to design, ship, and scale. Pre-built components, lightning-fast
+          performance and delightful UX out of the box.</p>
+
+        <div class="flex gap-3 flex-wrap">
+
+          <a href="#"
+            class=" inline-flex items-center gap-2 bg-white text-indigo-700 font-semibold px-5 py-3 rounded-md shadow-md">
+            <span class="animate-bounce">Contact Now</span></a>
+
+          <a href="#features" class="inline-flex items-center gap-2 border border-white/20 px-5 py-3 rounded-md">Learn
+            More</a>
+
+        </div>
+        <div>
+        </div>
+      </section>
+      <section class="">
+        <img src="C:\Users\Mohdk\OneDrive\Documents\kaifpfp3.jpg"
+          class="zoom-wrapper overflow-hidden object-cover transition-transform duration-400 ease-in-out hover:scale-110 w-70 h-70 border-7  bg-gradient-to-r from-pink-500 via-brown-500 via-red-500 via-gray-500 via-yellow-500 via-brown-500 to-teal-500 border-transparent bg-clip-border m-auto rounded-full"
+          </section>
+    </div>
+    <div class="text-2xl md:text-5xl font-bold leading-tight mb-4 text-center mt-10">
+      <span class="">About</span>
+      <span
+        class="bg-gradient-to-r from-pink-500 via-brown-500 via-red-500 via-gray-500 via-yellow-500 via-brown-500 to-teal-500 text-transparent bg-clip-text">Me</span>
+    </div>
+    <div class="text-center">
+      <p>Full stack Developer with 3+ years experince building innovative Ai-powered applicatins</p>
+    </div>
+    <section class="flex-wrap flex justify-center gap-5 p-4">
+      <div class="card rounded-2xl w-100 h-90">
+        <p class="p-4">
+          I'm a passionate full-stack developer with 3+ years of experience in building cutting-edge web applications.
+          Currently working at <span class="text-red-500 font-bold">AlReel.io</span>, where I focus on developing
+          Al-powered video generation platforms.
+        </p>
+        <p class="p-4">
+          Previously, I contributed to innovative SaaS solutions at <span
+            class="text-red-500 font-bold">Personate.al</span>. I'm passionate about Al, automation,
+          and video generation platforms.
+          personate.al
+        </p>
+        <p class="flex items-center p-4 rounded-lg shadow-2xl w- p-4">
+          <span class="text-xl mr-2">🎓</span>
+          <span class="text-red-600 font-medium">Education:</span>
+          <span class="ml-1 text-white-800">BSc in Mathematics</span>
+        </p>
+
+      </div>
+      <div class="circle border-2">
+
+      </div>
+      </div>
+      <div
+        class="card rounded-2xl shadow-2xl w-100 h-auto shadow-9 p-4 gap-4 z-10 transition-all duration-300 hover:scale-103">
+        <h3 class="font-semibold text-lg flex items-center space-x-2 mb-4">
+          <span class="text-purple-600">✨</span>
+
+          <span>Key Highlights</span>
+
+        </h3>
+
+        <ul class="space-y-3 text-lg">
+
+          <li class="flex items-start space-x-2">
+
+            <span class="text-black-600"><i class="fa fa-circle" aria-hidden="true"></i></span>
+
+            <span>Built AIReel app end-to-end (AI Reels + UGC Ad Generator)</span>
+
+          </li>
+
+          <li class="flex items-start space-x-2">
+
+            <span class="text-black-500"><i class="fa fa-circle" aria-hidden="true"></i></span>
+
+            <span>Worked on Saas video applications at Personate.ai</span>
+
+          </li>
+
+
+          <li class="flex items-start space-x-2">
+            <span class="text-black-500"><i class="fa fa-circle" aria-hidden="true"></i></span>
+
+            <span>Uses modern AI tools like ChatGPT, Claude, and Cursor for rapid development</span>
+
+          </li>
+
+          <li class="flex items-start space-x-2">
+            <span class="text-black-500"><i class="fa fa-circle" aria-hidden="true"></i></span>
+
+            <span>Strong foundation in Mathematics with ongoing MCA studies</span>
+
+          </li>
+
+    </section>
+    </section>
+    <br>
+    <section>
+      <div class="text-2xl md:text-4xl font-bold leading-tight mb-4 text-center mt-10">
+        <span class="">My</span>
+        <span
+          class="bg-gradient-to-r from-pink-500 via-brown-500 via-red-500 via-gray-500 via-yellow-500 via-brown-500 to-teal-500 text-transparent bg-clip-text">Journey</span>
+      </div>
+      <div class="text-center">
+        <p>My professional journey in software developer</p>
+      </div>
+
+      <div class="card rounded-2xl shadow-2xl w-[75%] h-auto shadow-9 p-5 mt-10 m-auto">
+        <ul>
+          <li class="flex items-start space-x-2">
+            <span class="text-black-500"><i class="fa fa-circle text-purple-600" aria-hidden="true"></i></span>
+
+            <span class="font-bold">Software Developer</span>
+          </li>
+          <li class="">
+            <span class="list-none">AIReel.io</span>
+          </li>
+        </ul>
+        <ul>
+          <li class="h-auto">
+            <span class="text-6xl">.</span> Built AlReel application end-to-end, an Al-powered platform for generating
+            reels and UGC advertisements
+          </li>
+          <li class="h-auto">
+            <span class="text-6xl">.</span>Developed full-stack features using modern web technologies and Al
+            integration
+          </li>
+          <li class="h-auto">
+            <span class="text-6xl">.</span>Implemented automated video generation workflows and user-friendly interfaces
+          </li>
+          <li class="h-auto">
+            <span class="text-6xl">.</span>Collaborated with Al/ML teams to integrate advanced video processing capabile
+          </li>
+
+        </ul>
+      </div>
+
+
+      <div class="card rounded-2xl shadow-2xl w-[75%] h-auto shadow-9 p-5 mt-10 m-auto">
+        <ul>
+          <li class="flex items-start space-x-2">
+            <span class="text-black-500"><i class="fa fa-circle text-teal-600" aria-hidden="true"></i></span>
+
+            <span class="font-bold">Frontend Developer</span>
+          </li>
+          <li class="">
+            <span class="list-none">Personate.ai</span>
+          </li>
+        </ul>
+        <ul>
+          <li class="h-auto">
+            <span class="text-6xl">.</span> Worked on SaaS video applications with focus on user experience and
+            performance
+          </li>
+          <li class="h-auto">
+            <span class="text-6xl">.</span>Developed and maintained web applications using modern JavaScript frameworks
+          </li>
+          <li class="h-auto">
+            <span class="text-6xl">.</span>Collaborated with cross-functional teams to deliver high-quality software
+            solutions
+          </li>
+          <li class="h-auto">
+            <span class="text-6xl">.</span>Collaborated with Al/ML teams to integrate advanced video processing capabile
+          </li>
+
+        </ul>
+      </div>
+
+    </section>
+
+    </section>
+    </div>
+    <div class="text-2xl md:text-5xl font-bold leading-tight mb-4 text-center mt-10">
+      <span class="">Skill &</span>
+      <span
+        class="bg-gradient-to-r from-pink-500 via-brown-500 via-red-500 via-gray-500 via-yellow-500 via-brown-500 to-teal-500 text-transparent bg-clip-text">Technologies</span>
+    </div>
+    <div class="text-center">
+      <p>technologies I work with to build amazing applications</p>
+    </div>
+    <section class="flex-wrap flex justify-center gap-5 p-4 mt-10">
+
+
+      <div
+        class="bg-white/20 card rounded-2xl shadow-2xl w-100 h-auto shadow-9 p-4 gap-4 z-10 transition-all duration-300 hover:scale-105">
+        <span>🎨</span><span class="">Frontend</span><br><br>
+        <div class="flex flex-wrap p-2 gap-3">
+          <span class="bg-red-500 rounded-full border-3 p-2">React</span>
+          <span class="bg-red-500 rounded-full border-3 p-2">Next.js</span>
+          <span class="bg-red-500 rounded-full border-3 p-2">TypeScript</span>
+          <span class="bg-red-500 rounded-full border-3 p-2">JavaScript</span>
+          <span class="bg-red-500 rounded-full border-3 p-2">TailwindCSS</span>
+          <span class="bg-red-500 rounded-full border-3 p-2">HTML5</span>
+          <span class="bg-red-500 rounded-full border-3 p-2">CSS</span>
+        </div>
+      </div>
+
+      <div
+        class="bg-white/20 card rounded-2xl shadow-2xl w-100 h-auto shadow-9 p-4 gap-4 z-10 transition-all duration-300 hover:scale-105">
+        <span>⚙️</span><span class="">Backend</span><br><br>
+        <div class="flex flex-wrap p-1 gap-3">
+          <span class="bg-cyan-400 rounded-full border-3 p-2">Node.js</span>
+          <span class="bg-cyan-400 rounded-full border-3 p-2">Express.js</span>
+          <span class="bg-cyan-400 rounded-full border-3 p-2">python</span>
+          <span class="bg-cyan-400 rounded-full border-3 p-2">REST APIs</span>
+          <span class="bg-cyan-400 rounded-full border-3 p-2">GraphQL</span>
+          <span class="bg-cyan-400 rounded-full border-3 p-2">MongoDB</span>
+          <span class="bg-cyan-400 rounded-full border-3 p-2">PostgreSQL</span>
+        </div>
+      </div>
+      <div
+        class="bg-white/20 card rounded-2xl shadow-2xl w-100 h-auto shadow-9 p-4 gap-4 z-10 transition-all duration-300 hover:scale-105">
+        <span>🤖</span><span class="">AI % Tools</span><br><br>
+        <div class="flex flex-wrap p-1 gap-3">
+          <span class="bg-purple-700 rounded-full border-3 p-2">ChatGPT</span>
+          <span class="bg-purple-700 rounded-full border-3 p-2">Claude</span>
+          <span class="bg-purple-700 rounded-full border-3 p-2">Cursor</span>
+          <span class="bg-purple-700 rounded-full border-3 p-2">OpenAI API</span>
+          <span class="bg-purple-700 rounded-full border-3 p-2">TAutomation</span>
+        </div>
+      </div>
+      <div
+        class="bg-white/20 card rounded-2xl shadow-2xl w-100 h-auto shadow-9 p-4 gap-4 z-10 transition-all duration-300 hover:scale-105">
+        <span>☁️</span><span class="">loud & DevOps</span><br><br>
+        <div class="flex flex-wrap p-2 gap-3">
+          <span class="bg-green-500 rounded-full border-3 p-2">AWS</span>
+          <span class="bg-green-500 rounded-full border-3 p-2">Vercel</span>
+          <span class="bg-green-500 rounded-full border-3 p-2">Git</span>
+          <span class="bg-green-500 rounded-full border-3 p-2">GitHub</span>
+          <span class="bg-green-500 rounded-full border-3 p-2">CI/CD</span>
+        </div>
+      </div>
+      <div
+        class="bg-white/20 card rounded-2xl shadow-2xl w-100 h-auto shadow-9 p-4 gap-4 z-10 transition-all duration-300 hover:scale-105">
+        <span>🎯</span><span class="">Design & UX</span><br><br>
+        <div class="flex flex-wrap p-1 gap-3">
+          <span class="bg-orange-500 rounded-full border-3 p-2">Figma</span>
+          <span class="bg-orange-500 rounded-full border-3 p-2">UI/UX Design</span>
+          <span class="bg-orange-500 rounded-full border-3 p-2">Responsive Design</span>
+          <span class="bg-orange-500 rounded-full border-3 p-2">Accessibility</span>
+          <span class="bg-orange-500 rounded-full border-3 p-2">User Research</span>
+        </div>
+      </div>
+      <div
+        class="bg-white/20 card rounded-2xl shadow-2xl w-100 h-auto shadow-9 p-4 gap-4 z-10 transition-all duration-300 hover:scale-105">
+        <span>📚</span><span class="">Other</span><br><br>
+        <div class="flex flex-wrap p-1 gap-3">
+          <span class="bg-purple-700 rounded-full border-3 p-2">Scrum</span>
+          <span class="bg-purple-700 rounded-full border-3 p-2">Testing</span>
+          <span class="bg-purple-700 rounded-full border-3 p-2">Code Review</span>
+          <span class="bg-purple-700 rounded-full border-3 p-2">Documentation</span>
+          <span class="bg-purple-700 rounded-full border-3 p-2">Mathematics</span>
+        </div>
+      </div>
+
+
+    </section>
+
+    <div class="text-2xl md:text-5xl font-bold leading-tight mb-4 text-center mt-10">
+      <span class="">Featured</span>
+      <span
+        class="bg-gradient-to-r from-pink-500 via-brown-500 via-red-500 via-gray-500 via-yellow-500 via-brown-500 to-teal-500 text-transparent bg-clip-text">Projects</span>
+    </div>
+    <div class="text-center">
+      <p>technologies I work with to build amazing applications</p>
+    </div>
+    <section class="mt-15">
+
+
+      <!-- Project Grid Container -->
+      <div class="max-w-7xl mx-auto py-10 px-4 md:px-8 -mt-16">
+
+        <!-- Grid Layout Definition -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Project Card 1: TmDog Website -->
+          <!-- Tailwind classes handle border, background, shadow, and transition -->
+          <div class="flex flex-col rounded-xl overflow-hidden bg-slate-900 border border-indigo-500/20 shadow-xl 
+                        hover:translate-y-[-4px] transition duration-300 hover:shadow-indigo-500/50">
+
+            <!-- Inner Layout: Image Left, Text Right (on desktop) -->
+            <div class="flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 p-4 lg:p-6 flex-grow">
+
+              <!-- Image ratio -->
+              <div class="lg:col-span-1 bg-slate-800 rounded-lg p-1.5 mb-0 lg:mb-0 object-cover">
+
+                <img src="c:\Users\Mohdk\OneDrive\Documents\tindogm.jpg" alt="Personal Website Screenshot"
+                  class="rounded-md w-full h-full">
+
+              </div>
+
+              <!-- Text Column -->
+              <div class="lg:col-span-1 flex flex-col space-y-1">
+                <div class="flex items-center space-x-2">
+                  <span class="w-2 h-2 bg-sky-400 rounded-full"></span>
+                  <h2 class="text-lg font-bold">TmDog Website</h2>
+                </div>
+                <p class="text-xs font-medium text-sky-400">Pet-Matching Web Application</p>
+                <p class="text-gray-300 text-xs leading-snug">
+                  Contributed to a pet-matching web application showcasing responsive design, intuitive interface, and
+                  playful branding.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- Tags Section (Full Width, below the main content) -->
+            <div class="px-6 pb-4 pt-2 border-t border-slate-700/50">
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-red-600/20 text-red-300">Next.js</span>
+                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-600/20 text-blue-300">Tailwind
+                  CSS</span>
+                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-green-600/20 text-green-300">SaaS</span>
+                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-indigo-600/20 text-indigo-300">Video
+                  Tech</span>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Project Card 2: Personate SaaS -->
+          <div class="flex flex-col rounded-xl overflow-hidden bg-slate-900 border border-indigo-500/20 shadow-xl 
+                        hover:translate-y-[-4px] transition duration-300 hover:shadow-indigo-500/50">
+
+            <!-- Inner Layout: Image Left, Text Right (on desktop) -->
+            <div class="flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 p-4 lg:p-6 flex-grow">
+
+              <!-- Image ratio -->
+              <div class="lg:col-span-1 bg-slate-800 rounded-lg p-1.5 mb-0 lg:mb-0 object-cover">
+
+                <img src="c:\Users\Mohdk\OneDrive\Documents\tindog.jpg" alt="Personal Website Screenshot"
+                  class="rounded-md w-full h-full">
+
+              </div>
+
+              <!-- Text Column -->
+              <div class="lg:col-span-1 flex flex-col space-y-1">
+                <div class="flex items-center space-x-2">
+                  <span class="w-2 h-2 bg-fuchsia-400 rounded-full"></span>
+                  <h2 class="text-lg font-bold">Personate SaaS</h2>
+                </div>
+                <p class="text-xs font-medium text-fuchsia-400">Video-Focused SaaS Application</p>
+                <p class="text-gray-300 text-xs leading-snug">
+                  Contributed to a comprehensive SaaS video application with advanced user management and processing
+                  capabilities, including automated workflows.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- Tags Section (Full Width, below the main content) -->
+            <div class="px-6 pb-4 pt-2 border-t border-slate-700/50">
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-red-600/20 text-red-300">Next.js</span>
+                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-600/20 text-blue-300">Tailwind
+                  CSS</span>
+                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-green-600/20 text-green-300">SaaS</span>
+                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-indigo-600/20 text-indigo-300">Video
+                  Tech</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3: Personate Website -->
+          <div class="flex flex-col rounded-xl overflow-hidden bg-slate-900 border border-indigo-500/20 shadow-xl 
+                        hover:translate-y-[-4px] transition duration-300 hover:shadow-indigo-500/50">
+
+            <!-- Inner Layout: Image Left, Text Right (on desktop) -->
+            <div class="flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 p-4 lg:p-6 flex-grow">
+
+              <!-- Image ratio -->
+              <div class="lg:col-span-1 bg-slate-800 rounded-lg p-1.5 mb-0 lg:mb-0 object-cover">
+
+                <img src="c:\Users\Mohdk\OneDrive\Documents\tindogm.jpg" alt="Personal Website Screenshot"
+                  class="rounded-md w-full h-full">
+
+              </div>
+
+              <!-- Text Column -->
+              <div class="lg:col-span-1 flex flex-col space-y-1">
+                <div class="flex items-center space-x-2">
+                  <span class="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                  <h2 class="text-lg font-bold" id="neww">Personate Website</h2>
+                </div>
+                <p class="text-xs font-medium text-cyan-400">Modern responsive website</p>
+                <p class="text-gray-300 text-xs leading-snug">
+                  Clean, modern portfolio website built with Next.js and Tailwind CSS showcasing my work and
+                  experience.modern portfolio website built with Next.js and Tailw
+                </p>
+              </div>
+
+            </div>
+
+            <!-- Tags Section (Full Width, below the main content) -->
+            <div class="px-6 pb-4 pt-2 border-t border-slate-700/50">
+              <div class="flex flex-wrap gap-1">
+                <span
+                  class="px-3 py-1 text-xs font-semibold rounded-full bg-pink-600/20 text-pink-300">Responsive</span>
+                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-red-600/20 text-red-300">Next.js</span>
+                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-blue-600/20 text-blue-300">Tailwind
+                  CSS</span>
+                <span
+                  class="px-3 py-1 text-xs font-semibold rounded-full bg-amber-600/20 text-amber-300">TypeScript</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+  <footer class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+    <div class="border-t border-black-900/5 py-10"><svg class="mx-auto h-5 w-auto text-white-900" aria-hidden="true"
+        viewBox="0 0 160 24" fill="none">
+        <path
+          d="M18.724 1.714c-4.538 0-7.376 2.286-8.51 6.857 1.702-2.285 3.687-3.143 5.957-2.57 1.296.325 2.22 1.271 3.245 2.318 1.668 1.706 3.6 3.681 7.819 3.681 4.539 0 7.376-2.286 8.51-6.857-1.701 2.286-3.687 3.143-5.957 2.571-1.294-.325-2.22-1.272-3.245-2.32-1.668-1.705-3.6-3.68-7.819-3.68zM10.214 12c-4.539 0-7.376 2.286-8.51 6.857 1.701-2.286 3.687-3.143 5.957-2.571 1.294.325 2.22 1.272 3.245 2.32 1.668 1.705 3.6 3.68 7.818 3.68 4.54 0 7.377-2.286 8.511-6.857-1.702 2.286-3.688 3.143-5.957 2.571-1.295-.326-2.22-1.272-3.245-2.32-1.669-1.705-3.6-3.68-7.82-3.68z"
+          class="fill-sky-400"></path>
+        <path
+          d="M51.285 9.531V6.857h-3.166v-3.6l-2.758.823v2.777h-2.348v2.674h2.348v6.172c0 3.343 1.686 4.526 5.924 4.011V17.22c-2.094.103-3.166.129-3.166-1.517V9.53h3.166zm12.087-2.674v1.826c-.97-1.337-2.476-2.16-4.468-2.16-3.472 0-6.357 2.931-6.357 6.763 0 3.805 2.885 6.763 6.357 6.763 1.992 0 3.498-.823 4.468-2.186v1.851h2.758V6.857h-2.758zM59.338 17.4c-2.297 0-4.034-1.723-4.034-4.114 0-2.392 1.736-4.115 4.034-4.115s4.034 1.723 4.034 4.115c0 2.391-1.736 4.114-4.034 4.114zM70.723 4.929c.97 0 1.762-.823 1.762-1.775 0-.977-.792-1.774-1.762-1.774s-1.762.797-1.762 1.774c0 .952.792 1.775 1.762 1.775zm-1.379 14.785h2.758V6.857h-2.758v12.857zm5.96 0h2.757V.943h-2.758v18.771zM95.969 6.857l-2.502 8.872-2.655-8.872h-2.63L85.5 15.73l-2.477-8.872h-2.91l4.008 12.857h2.707l2.68-8.665 2.656 8.665h2.706L98.88 6.857h-2.911zm6.32-1.928c.97 0 1.762-.823 1.762-1.775 0-.977-.792-1.774-1.762-1.774s-1.762.797-1.762 1.774c0 .952.792 1.775 1.762 1.775zm-1.379 14.785h2.758V6.857h-2.758v12.857zm12.674-13.191c-1.736 0-3.115.643-3.957 1.98V6.857h-2.758v12.857h2.758v-6.891c0-2.623 1.43-3.703 3.242-3.703 1.737 0 2.86 1.029 2.86 2.983v7.611h2.757V11.82c0-3.343-2.042-5.297-4.902-5.297zm17.982-4.809v6.969c-.971-1.337-2.477-2.16-4.468-2.16-3.473 0-6.358 2.931-6.358 6.763 0 3.805 2.885 6.763 6.358 6.763 1.991 0 3.497-.823 4.468-2.186v1.851h2.757v-18h-2.757zM127.532 17.4c-2.298 0-4.034-1.723-4.034-4.114 0-2.392 1.736-4.115 4.034-4.115 2.297 0 4.034 1.723 4.034 4.115 0 2.391-1.737 4.114-4.034 4.114z"
+          fill="currentColor"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M145.532 3.429h8.511c.902 0 1.768.36 2.407 1.004.638.643.997 1.515.997 2.424v8.572c0 .909-.359 1.781-.997 2.424a3.394 3.394 0 01-2.407 1.004h-8.511a3.39 3.39 0 01-2.407-1.004 3.438 3.438 0 01-.997-2.424V6.857c0-.91.358-1.781.997-2.424a3.39 3.39 0 012.407-1.004zm-5.106 3.428c0-1.364.538-2.672 1.495-3.636a5.09 5.09 0 013.611-1.507h8.511c1.354 0 2.653.542 3.61 1.507a5.16 5.16 0 011.496 3.636v8.572a5.16 5.16 0 01-1.496 3.636 5.086 5.086 0 01-3.61 1.506h-8.511a5.09 5.09 0 01-3.611-1.506 5.164 5.164 0 01-1.495-3.636V6.857zm10.907 6.251c0 1.812-1.359 2.916-3.193 2.916-1.823 0-3.182-1.104-3.182-2.916v-5.65h1.633v5.52c0 .815.429 1.427 1.549 1.427 1.12 0 1.549-.612 1.549-1.428v-5.52h1.644v5.652zm1.72 2.748V7.457h1.644v8.4h-1.644z"
+          fill="currentColor"></path>
+      </svg>
+      <p class="mt-2 text-center text-sm leading-6 text-white-500">© 2022 Tailwind Labs Inc. All rights reserved.</p>
+      <div class="mt-4 flex items-center justify-center space-x-4 text-sm font-semibold leading-6 text-white-700"><a
+          href="/privacy-policy">Privacy policy</a>
+        <div class="h-4 w-px bg-white-500/20"></div><a href="/changelog">Changelog</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script>
+    // Mobile nav toggle
+    const btn = document.getElementById('nav-toggle');
+    const mobile = document.getElementById('mobile-nav');
+    const hamb = document.getElementById('hamb');
+    const close = document.getElementById('close');
+
+    btn.addEventListener('click', () => {
+      mobile.classList.toggle('hidden');
+      hamb.classList.toggle('hidden');
+      close.classList.toggle('hidden');
+    });
+  </script>
+  <script>
+    num1 = parseInt(prompt("Enter the first number:"))
+    num2 = parseInt(prompt("Enter the second number:"))
+    document.write("sum:" + (num1 + num2))
+  
+    num = parseInt(prompt("upto how much number you want"))
+    i =1
+    result=""
+    while (i < num)
+  {
+      result+=i+" "
+      i+=1
+    }
+      
+document.getElementById("neww").innerHTML=result+"<br>";
+
+
+  </script>
+
+
+</body>
+
+</html>

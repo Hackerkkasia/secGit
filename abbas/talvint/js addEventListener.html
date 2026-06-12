@@ -1,0 +1,43 @@
+<html>
+<head>
+   <title>Mouseover Event Example</title>
+   <style>
+      #myDiv {
+         width: 600px;
+         height: 200px;
+         background-color: lightblue;
+      }
+   </style>
+</head>
+<body>
+   <div id="myDiv">Hover over me</div>
+   <button id="doubleClickButton">Double-click me!</button>
+   <p id = "output"></p>
+   <script>
+       // Get the div element
+      const myDiv = document.getElementById("myDiv");
+
+       // Define the event handler function
+      function handleMouseover() {
+      myDiv.style.backgroundColor = "lightcoral";
+      } 
+
+      // Attach the event listener to the div
+      myDiv.addEventListener("mouseover", handleMouseover);
+
+      // Additional example: Change color back on mouseout
+      function handleMouseout() {
+         myDiv.style.backgroundColor = "lightblue";
+      }
+0.
+      myDiv.addEventListener("mouseout", handleMouseout);
+    
+      const doubleClickButton = document.getElementById('doubleClickButton');
+      const outputDiv = document.getElementById("output");
+      doubleClickButton.addEventListener('dblclick', function(event) {
+         outputDiv.innerHTML += 'Double-clicked!' + JSON.stringify(event) + "<br>";
+      });
+   
+   </script>
+</body>
+</html>
